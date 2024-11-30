@@ -1,6 +1,7 @@
 import { LeftSidebar } from "@/components/LeftSidebar/LeftSidebar";
 import { MainContent } from "@/components/HomePageContent/HomePageContent";
 import { RightSidebar } from "@/components/RightSidebar/RightSidebar";
+import Footer from "@/components/Footer/Footer"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         </main>
         <RightSidebar />
       </div>
+      <Footer />
     </>
   );
 }

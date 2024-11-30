@@ -12,6 +12,8 @@ import {
 } from "lucide-react"
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler"
 import Link from "next/link"
+import { ArrowTopRightIcon } from "@radix-ui/react-icons"
+import { ListenSection } from "../ListenSection/ListenSection"
 
 const surahs = ["Al Mulk", "Yaseen", "Ayatul Kursi", "Al Kahf", "Al Waqi'ah"]
 
@@ -26,12 +28,21 @@ const recentLessons = [
     instructor: "Imam Qamriah",
     stats: { views: "1.5K", likes: "24" },
   },
+]
+
+const LearningMethods = [
   {
-    title: "Hadith Lessons",
-    instructor: "Imam Ba'shah",
-    stats: { views: "9.7K", likes: "68" },
+    title: "Read Quran",
+    description: "Explore the Quran with translations for better understanding.",
+    href: "/read",
+  },
+  {
+    title: "Listen Quran",
+    description: "Immerse yourself in the melodious recitation of the Quran by renowned reciters.",
+    href: "/listen",
   },
 ]
+
 
 const quranSections = [
   {
@@ -63,13 +74,16 @@ export function MainContent() {
           <Input placeholder="What do you want to read?" className="pl-8" />
         </div>
         <ThemeToggler />
-        <Link href={'#'}>
+        <Link
+          target="__blank"
+          href="https://buymeacoffee.com/muhammadkaifnazeer"
+        >
           <Button>Support</Button>
         </Link>
       </div>
       <div className="flex-1 overflow-y-auto">
         <div className="space-y-6 p-6">
-          <Card className="bg-primary text-white">
+          <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white">
             <CardContent className="flex items-center justify-between p-6">
               <div className="space-y-2">
                 <h2 className="text-2xl font-bold">
@@ -80,7 +94,7 @@ export function MainContent() {
                   <br />
                   Ummah of Mumhammad(PBUH)
                 </p>
-                <Link href={'#'}>
+                <Link href={'/#startlearning'}>
                   <Button className="mt-4 bg-white hover:bg-white/90 text-primary">
                     Start Learning
                   </Button>
@@ -88,7 +102,7 @@ export function MainContent() {
               </div>
               <Image
                 src="/placeholder.svg?height=160&width=160"
-                alt="Quran Reciters"  
+                alt="Quran Reciters"
                 width={160}
                 height={160}
                 className="rounded-lg"
@@ -97,7 +111,7 @@ export function MainContent() {
           </Card>
 
           <ScrollArea className="w-full whitespace-nowrap">
-            <div className="flex w-max space-x-4 p-4">
+            <div className="flex w-max space-x-4 py-4">
               {surahs.map((surah, index) => (
                 <Button
                   key={index}
@@ -111,63 +125,35 @@ export function MainContent() {
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
 
-          <div>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold">Recent Learning</h2>
-              <div className="flex space-x-2">
-                <Button variant="outline" size="icon">
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <Button variant="outline" size="icon">
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
-              </div>
+          {/* learning methods */}
+          <div className="pb-4" id="startlearning">
+            <div className="mb-4 flex items-center justify-start">
+              <h2 className="text-xl font-semibold">Start Learning</h2>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {recentLessons.map((lesson, index) => (
-                <Card key={index}>
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <Image
-                        src={`/placeholder.svg?height=200&width=400&text=${lesson.title}`}
-                        alt={lesson.title}
-                        width={400}
-                        height={200}
-                        className="rounded-t-lg object-cover"
-                      />
-                      <Button
-                        size="icon"
-                        className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30"
-                      >
-                        <Play className="h-6 w-6" />
-                      </Button>
-                    </div>
-                    <div className="p-4">
-                      <div className="mb-2 flex items-center justify-between">
-                        <h3 className="font-semibold">{lesson.title}</h3>
-                        <Button variant="ghost" size="icon">
-                          <MoreVertical className="h-4 w-4" />
-                        </Button>
-                      </div>
-                      <p className="mb-2 text-sm text-muted-foreground">
-                        {lesson.instructor}
+            <div className="gap-3 grid grid-cols-1 sm:grid-cols-2">
+              {LearningMethods.map((method, index) => (
+                <Link key={index} href={method.href}>
+                  <div className="flex items-center justify-between rounded-[--radius] border p-4 hover:bg-muted/50">
+                    <div className="space-y-3">
+                      <h3 className="font-semibold">{method.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {method.description}
                       </p>
-                      <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                        <span>{lesson.stats.views} views</span>
-                        <span>{lesson.stats.likes} likes</span>
-                      </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
 
+          {/* listen quran */}
+          <ListenSection />
 
 
-          <div>
+          {/* read quran */}
+          <div className="py-4">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold">Quran Mazid</h2>
+              <h2 className="text-xl font-semibold">Read Quran</h2>
               <div className="flex space-x-2">
                 <Button variant="outline" size="sm">Surah</Button>
                 <Button variant="outline" size="sm">Juz</Button>
@@ -200,6 +186,11 @@ export function MainContent() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="w-full flex items-center justify-center">
+              <Link href="/read">
+                <Button variant={'outline'} size={'lg'} className="my-4">Show More</Button>
+              </Link>
             </div>
           </div>
         </div>
