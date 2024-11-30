@@ -20,7 +20,7 @@ export const ThemeToggler = React.forwardRef<
         variant="ghost"
         type="button"
         size="icon"
-        className={cn("px-2 hidden lg:flex", className)}
+        className={cn("px-2 hidden lg:flex shrink-0", className)}
         aria-label="Toggle theme"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         {...props}

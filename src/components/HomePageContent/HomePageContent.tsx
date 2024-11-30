@@ -88,7 +88,7 @@ export function MainContent() {
               </div>
               <Image
                 src="/placeholder.svg?height=160&width=160"
-                alt="Quran Reciters"
+                alt="Quran Reciters"  
                 width={160}
                 height={160}
                 className="rounded-lg"
