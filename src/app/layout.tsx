@@ -21,11 +21,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="mx-auto">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
