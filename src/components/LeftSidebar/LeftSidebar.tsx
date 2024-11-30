@@ -146,7 +146,7 @@ export function LeftSidebar() {
             </div>
           </div>
           <div className="lg:hidden">
-            <UserButton />  
+            <UserButton />
           </div>
           <nav className="p-3">
             <ul className="space-y-1">

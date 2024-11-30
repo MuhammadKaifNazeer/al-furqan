@@ -46,10 +46,12 @@ export function RightSidebar() {
       <ScrollArea>
         <UserButton />
         <div className="flex-1 p-4">
-          <Calendar
-            mode="single"
-            className="scale-[1.2] translate-x-4 my-4"
-          />
+          <div className="border rounded-[--radius]">
+            <Calendar
+              mode="single"
+              className="scale-[1.1] translate-x-4 my-4"
+            />
+          </div> 
           <div className="my-6">
             <h2 className="mb-4 text-lg font-semibold">Memorization</h2>
             <div className="space-y-4">

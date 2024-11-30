@@ -1,13 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { MoreHorizontal, Search } from 'lucide-react'
+import { MoreHorizontal } from 'lucide-react'
 import React from "react"
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
@@ -15,7 +13,7 @@ import Link from "next/link"
 export function UserButton() {
 
     return (
-        <div className="flex items-center justify-between px-6 py-2.5">
+        <div className="flex items-center justify-between px-4 py-2.5">
             <Link href={'/profile'}>
                 <div className="flex items-center gap-2">
                     <Avatar className="h-8 w-8">
