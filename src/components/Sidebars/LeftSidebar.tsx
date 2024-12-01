@@ -17,65 +17,11 @@ import {
 import { ScrollArea } from "../ui/scroll-area"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Input } from "../ui/input"
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler"
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { UserButton } from "../UserButton/UserButton"
-
-const menuItems = [
-  {
-    icon: Home,
-    label: "Overview",
-    href: '/',
-  },
-  {
-    icon: BookOpen,
-    label: "Quran Mazid",
-    href: '/quran',
-  },
-  {
-    icon: Users,
-    label: "Reciters",
-    href: '/users',
-  },
-  {
-    icon: GraduationCap,
-    label: "Arabic Learning",
-    href: '/arabiclearning',
-  },
-  {
-    icon: BookOpen,
-    label: "Memorization",
-    href: '/memorization',
-  },
-  {
-    icon: HelpCircle,
-    label: "Question & Answer",
-    href: '/qna',
-  },
-  {
-    icon: Podcast,
-    label: "Podcast",
-    href: '/podcast',
-  },
-  {
-    icon: History,
-    label: "History",
-    href: '/histroy',
-  },
-  {
-    icon: Heart,
-    label: "Liked",
-    href: '/liked',
-
-  },
-  {
-    icon: BookOpen,
-    label: "Favourites",
-    href: '/favourites',
-  },
-]
+import NavigationLinks from "@/data/navigation"
 
 export function LeftSidebar() {
   const pathname = usePathname();
@@ -146,11 +92,11 @@ export function LeftSidebar() {
             </div>
           </div>
           <div className="lg:hidden">
-            <UserButton />
+            <UserButton className="pl-[1.3rem]"/>
           </div>
           <nav className="p-3">
             <ul className="space-y-1">
-              {menuItems.map((item, index) => (
+              {NavigationLinks.mainNav.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>
                     <Button
@@ -167,10 +113,17 @@ export function LeftSidebar() {
           </nav>
         </ScrollArea>
         <div className="p-3">
-          <Button variant="ghost" className="w-full justify-start">
-            <Settings className="mr-2 h-4 w-4" />
-            Settings
-          </Button>
+          {NavigationLinks.secondaryNav.map((item, index) => (
+            <Link key={index} href={item.href}>
+              <Button
+                variant={`${pathname === item.href ? "secondary" : "ghost"}`}
+                className="w-full justify-start"
+              >
+                <item.icon className="mr-2 h-4 w-4" />
+                {item.label}
+              </Button>
+            </Link>
+          ))}
         </div>
       </div>
     </>

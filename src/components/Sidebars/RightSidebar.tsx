@@ -44,14 +44,16 @@ export function RightSidebar() {
   return (
     <div className="sticky top-0 hidden lg:flex h-screen w-80 flex-col overflow-y-auto bg-background">
       <ScrollArea>
-        <UserButton />
+        <div className="-pl-[0.9rem]">
+          <UserButton />
+        </div>
         <div className="flex-1 p-4">
           <div className="border rounded-[--radius]">
             <Calendar
               mode="single"
               className="scale-[1.1] translate-x-4 my-4"
             />
-          </div> 
+          </div>
           <div className="my-6">
             <h2 className="mb-4 text-lg font-semibold">Memorization</h2>
             <div className="space-y-4">
