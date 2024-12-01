@@ -15,6 +15,7 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { UserButton } from "../UserButton/UserButton"
 import NavigationLinks from "@/data/navigation"
+import { Input } from "../ui/input"
 
 export function Navbar() {
     const pathname = usePathname();
@@ -26,6 +27,20 @@ export function Navbar() {
 
     return (
         <>
+            <div className="sticky top-0 z-10 bg-background px-4 py-2.5 hidden md:flex items-center space-x-4">
+                <div className="relative w-full">
+                    <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <Input placeholder="What do you want to read?" className="pl-8" />
+                </div>
+                <ThemeToggler />
+                <Link
+                    target="__blank"
+                    href="https://buymeacoffee.com/muhammadkaifnazeer"
+                >
+                    <Button>Support</Button>
+                </Link>
+            </div>
+
             <div className="fixed md:hidden top-0 z-10 bg-background px-6 py-2.5 flex items-center justify-between w-full">
                 <Link
                     href={'/'}
@@ -58,12 +73,12 @@ export function Navbar() {
             </div>
 
             <div
-                className={`fixed lg:hidden w-screen h-screen bg-black/70 z-[105]  duration-500  ${isOpen ? "-translate-x-0 opacity-1" : "-translate-x-full opacity-0"
+                className={`fixed md:hidden w-screen h-screen bg-black/70 z-[105]  duration-500  ${isOpen ? "-translate-x-0 opacity-1" : "-translate-x-full opacity-0"
                     }`}
                 onClick={() => setIsOpen(false)}
             />
 
-            <div className={`fixed top-0 z-[110] flex h-screen w-64 flex-col bg-background  duration-500 ${isOpen ? "-translate-x-0" : "-translate-x-full"
+            <div className={`fixed md:hidden top-0 z-[110] flex h-screen w-64 flex-col bg-background  duration-500 ${isOpen ? "-translate-x-0" : "-translate-x-full"
                 }`}>
                 <ScrollArea className="flex-1">
                     <div className="flex items-center justify-between">

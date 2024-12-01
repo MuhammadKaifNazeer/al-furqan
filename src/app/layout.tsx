@@ -28,11 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="mx-auto 2xl:max-w-[90rem]">
-            <Navbar />
-            <div className="max-md:pt-12">
-              {children}
-            </div>
-            <Footer />
+            {children}
           </main>
         </ThemeProvider>
       </body>

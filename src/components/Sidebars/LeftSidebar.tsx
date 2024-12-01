@@ -25,7 +25,7 @@ export function LeftSidebar() {
 
   return (
     <>
-      <div className={`fixed md:sticky top-0 z-[110] md:-translate-x-0 flex h-screen w-64 flex-col bg-background`}>
+      <div className={`fixed md:sticky top-0 z-[110] md:-translate-x-0 hidden md:flex h-screen w-64 flex-col bg-background`}>
         <ScrollArea className="flex-1">
           <div className="flex items-center justify-between">
             <Link href={'/'}>

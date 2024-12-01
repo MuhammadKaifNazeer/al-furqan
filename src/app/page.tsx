@@ -70,19 +70,6 @@ export default function Home() {
   return (
     <FullSidebarLayout>
       <div className="flex flex-col">
-        <div className="sticky top-0 z-10 bg-background px-4 py-2.5 hidden md:flex items-center space-x-4">
-          <div className="relative w-full">
-            <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input placeholder="What do you want to read?" className="pl-8" />
-          </div>
-          <ThemeToggler />
-          <Link
-            target="__blank"
-            href="https://buymeacoffee.com/muhammadkaifnazeer"
-          >
-            <Button>Support</Button>
-          </Link>
-        </div>
         <div className="flex-1 overflow-y-auto">
           <div className="space-y-6 p-6">
             <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white">
