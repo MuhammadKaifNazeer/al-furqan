@@ -27,7 +27,10 @@ export function Navbar() {
     return (
         <>
             <div className="fixed md:hidden top-0 z-10 bg-background px-6 py-2.5 flex items-center justify-between w-full">
-                <Link href={'/'}>
+                <Link
+                    href={'/'}
+                    onClick={() => setIsOpen(false)}
+                >
                     <div className="flex items-center gap-2">
                         <div className="flex items-center gap-2">
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -91,10 +94,15 @@ export function Navbar() {
                         <ul className="space-y-1">
                             {NavigationLinks.mainNav.map((item, index) => (
                                 <li key={index}>
-                                    <Link href={item.href}>
+                                    <Link
+                                        href={item.href}
+                                        target={item.external ? "_blank" : "_self"}
+                                        rel={item.external ? "noopener noreferrer" : undefined}
+                                    >
                                         <Button
                                             variant={`${pathname === item.href ? "secondary" : "ghost"}`}
                                             className="w-full justify-start"
+                                            onClick={() => setIsOpen(false)}
                                         >
                                             <item.icon className="mr-2 h-4 w-4" />
                                             {item.label}
@@ -107,10 +115,16 @@ export function Navbar() {
                 </ScrollArea>
                 <div className="p-3">
                     {NavigationLinks.secondaryNav.map((item, index) => (
-                        <Link key={index} href={item.href}>
+                        <Link
+                            key={index}
+                            href={item.href}
+                            target={item.external ? "_blank" : "_self"}
+                            rel={item.external ? "noopener noreferrer" : undefined}
+                        >
                             <Button
                                 variant={`${pathname === item.href ? "secondary" : "ghost"}`}
                                 className="w-full justify-start"
+                                onClick={() => setIsOpen(false)}
                             >
                                 <item.icon className="mr-2 h-4 w-4" />
                                 {item.label}

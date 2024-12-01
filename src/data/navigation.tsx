@@ -1,78 +1,74 @@
 import {
-    BookOpen,
-    GraduationCap,
-    Heart,
-    HelpCircle,
-    History,
-    Home,
-    Podcast,
-    Search,
-    Settings,
-    Users,
-    X,
-} from "lucide-react"
+  BookOpen,
+  ExternalLink,
+  HandCoins,
+  Home,
+  Mic,
+  MoveUpRight,
+  Settings,
+  User,
+} from "lucide-react";
 
-const NavigationLinks = {
-    mainNav: [
-        {
-            icon: Home,
-            label: "Overview",
-            href: '/',
-        },
-        {
-            icon: BookOpen,
-            label: "Read Quran",
-            href: '/read',
-        },
-        {
-            icon: Users,
-            label: "Reciters",
-            href: '/users',
-        },
-        {
-            icon: GraduationCap,
-            label: "Arabic Learning",
-            href: '/arabiclearning',
-        },
-        {
-            icon: BookOpen,
-            label: "Memorization",
-            href: '/memorization',
-        },
-        {
-            icon: HelpCircle,
-            label: "Question & Answer",
-            href: '/qna',
-        },
-        {
-            icon: Podcast,
-            label: "Podcast",
-            href: '/podcast',
-        },
-        {
-            icon: History,
-            label: "History",
-            href: '/histroy',
-        },
-        {
-            icon: Heart,
-            label: "Liked",
-            href: '/liked',
-
-        },
-        {
-            icon: BookOpen,
-            label: "Favourites",
-            href: '/favourites',
-        },
-    ],
-    secondaryNav: [
-        {
-            icon: Settings,
-            label: "Settings",
-            href: '/settings',  
-        },
-    ]
+interface NavLink {
+  icon: React.ElementType;
+  label: string;
+  href: string;
+  external?: boolean;
 }
 
-export default NavigationLinks   
+interface NavigationLinksType {
+  mainNav: NavLink[];
+  secondaryNav: NavLink[];
+}
+
+const NavigationLinks: NavigationLinksType = {
+  mainNav: [
+    {
+      icon: Home,
+      label: "Overview",
+      href: "/",
+    },
+    {
+      icon: BookOpen,
+      label: "Read Quran",
+      href: "/read",
+    },
+    {
+      icon: Mic,
+      label: "Listen Quran",
+      href: "/listen",
+    },
+    {
+      icon: User,
+      label: "Profile",
+      href: "/profile",
+    },
+    {
+      icon: Settings,
+      label: "Settings",
+      href: "/settings",
+    },
+    {
+      icon: HandCoins,
+      label: "Support",
+      href: "https://buymeacoffe.com/muhammadkaifnazeer",
+      external: true,
+    },
+  ],
+  secondaryNav: [
+    {
+      icon: ExternalLink,
+      label: "Quran.com",
+      href: "https://quran.com",
+      external: true,
+    },
+    {
+      icon: ExternalLink,
+      label: "Sunnah.com",   
+      href: "https://sunnah.com",
+      external: true,
+    },
+  ],
+};
+
+export default NavigationLinks;

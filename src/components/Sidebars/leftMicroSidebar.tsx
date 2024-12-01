@@ -49,7 +49,11 @@ export function LeftMircroSidebar() {
                         <ul className="space-y-1">
                             {NavigationLinks.mainNav.map((item, index) => (
                                 <li key={index}>
-                                    <Link href={item.href}>
+                                    <Link
+                                        href={item.href}
+                                        target={item.external ? "_blank" : "_self"}
+                                        rel={item.external ? "noopener noreferrer" : undefined}
+                                    >
                                         <Button
                                             size={'icon'}
                                             variant={`${pathname === item.href ? "secondary" : "ghost"}`}
@@ -71,9 +75,14 @@ export function LeftMircroSidebar() {
                         </ul>
                     </nav>
                 </ScrollArea>
-                <div className="p-3 w-full mx-auto">
+                <div className="p-3 w-full mx-auto flex flex-col">
                     {NavigationLinks.secondaryNav.map((item, index) => (
-                        <Link key={index} href={item.href}>
+                        <Link
+                            key={index}
+                            href={item.href}
+                            target={item.external ? "_blank" : "_self"}
+                            rel={item.external ? "noopener noreferrer" : undefined}
+                        >
                             <Button
                                 size={'icon'}
                                 variant={`${pathname === item.href ? "secondary" : "ghost"}`}
