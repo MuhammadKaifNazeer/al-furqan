@@ -5,6 +5,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import {
   MoreVertical,
 } from "lucide-react"
+import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { ListenSection } from "@/components/ListenSection/ListenSection"
 import FullSidebarLayout from "@/layouts/fullSidbarLayout"
@@ -31,24 +32,27 @@ const LearningMethods = [
 ]
 
 
-const quranSections = [
+const quranSurah = [
   {
     number: "1",
     title: "Al-Fatiha",
     subtitle: "The Opener",
     ayahs: "7 Ayah",
+    href: "/surah/1"
   },
   {
     number: "2",
     title: "Al-Baqarah",
     subtitle: "The Cow",
     ayahs: "286 Ayah",
+    href: "/surah/2"
   },
   {
     number: "3",
     title: "Ali 'Imran",
     subtitle: "Family of Imran",
     ayahs: "200 Ayah",
+    href: "/surah/3"
   },
 ]
 
@@ -131,36 +135,34 @@ export default function Home() {
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-xl font-semibold">Read Quran</h2>
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm">Surah</Button>
-                  <Button variant="outline" size="sm">Juz</Button>
+                  <Button variant="outline" size="sm">Surahs</Button>
                 </div>
               </div>
-              <div className="space-y-4">
-                {quranSections.map((section, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between rounded-lg border border-border p-4 hover:bg-muted/50"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 font-semibold text-primary">
-                        {section.number}
+              <div className="flex flex-col gap-4">
+                {quranSurah.map((surah, index) => (
+                  <Link href={surah.href} key={index}>
+                    <div className="flex items-center justify-between rounded-lg border border-border p-4 hover:bg-muted/50" >
+                      <div className="flex items-center space-x-4">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 font-semibold text-primary">
+                          {surah.number}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold">{surah.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {surah.subtitle}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold">{section.title}</h3>
-                        <p className="text-sm text-muted-foreground">
-                          {section.subtitle}
-                        </p>
+                      <div className="flex items-center space-x-4">
+                        <span className="text-sm text-muted-foreground">
+                          {surah.ayahs}
+                        </span>
+                        <Button variant="ghost" size="icon">
+                          <ArrowTopRightIcon className="h-4 w-4" />
+                        </Button>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <span className="text-sm text-muted-foreground">
-                        {section.ayahs}
-                      </span>
-                      <Button variant="ghost" size="icon">
-                        <MoreVertical className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
               <div className="w-full flex items-center justify-center">
