@@ -1,35 +1,21 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import {
-  ChevronLeft,
-  ChevronRight,
   MoreVertical,
-  Play,
-  Search,
 } from "lucide-react"
-import { ThemeToggler } from "@/components/ThemeToggler/ThemeToggler"
 import Link from "next/link"
-import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import { ListenSection } from "@/components/ListenSection/ListenSection"
 import FullSidebarLayout from "@/layouts/fullSidbarLayout"
 
-const surahs = ["Al Mulk", "Yaseen", "Ayatul Kursi", "Al Kahf", "Al Waqi'ah"]
-
-const recentLessons = [
-  {
-    title: "Salah Lessons",
-    instructor: "Abu Bakkar",
-    stats: { views: "25K", likes: "12K" },
-  },
-  {
-    title: "Quran Lessons",
-    instructor: "Imam Qamriah",
-    stats: { views: "1.5K", likes: "24" },
-  },
-]
+const surahs = [
+  { id: 67, name: "Al Mulk", href: "/surah/67" },
+  { id: 36, name: "Yaseen", href: "/surah/36" },
+  { id: 1, name: "Al-Fatihah", href: "/surah/1" },
+  { id: 18, name: "Al Kahf", href: "/surah/18" },
+  { id: 56, name: "Al Waqi'ah", href: "/surah/56" },
+];
 
 const LearningMethods = [
   {
@@ -102,13 +88,14 @@ export default function Home() {
             <ScrollArea className="w-full whitespace-nowrap">
               <div className="flex w-max space-x-4 py-4">
                 {surahs.map((surah, index) => (
-                  <Button
-                    key={index}
-                    variant={index === 0 ? "default" : "outline"}
-                    className="rounded-full"
-                  >
-                    {surah}
-                  </Button>
+                  <Link href={surah.href} key={index}>
+                    <Button
+                      variant={index === 0 ? "default" : "outline"}
+                      className="rounded-full"
+                    >
+                      {surah.name}
+                    </Button>
+                  </Link>
                 ))}
               </div>
               <ScrollBar orientation="horizontal" />
