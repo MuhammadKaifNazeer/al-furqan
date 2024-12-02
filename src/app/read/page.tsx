@@ -21,7 +21,7 @@ const ReadPage = async () => {
                                                 {surah.id}
                                             </div>
                                             <div>
-                                                <CardTitle>{surah.name_simple}</CardTitle>
+                                                <CardTitle className='mb-[0.2rem]'>{surah.name_simple}</CardTitle>
                                                 <CardDescription>
                                                     {surah.translated_name.name} • {surah.verses_count} Verses
                                                 </CardDescription>
