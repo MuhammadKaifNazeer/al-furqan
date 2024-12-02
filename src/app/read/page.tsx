@@ -3,7 +3,18 @@ import React from 'react'
 import { fetchSurahs } from "@/utils/api"
 import Link from "next/link"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: "Read Quran - Explore Surahs",
+    description: "Browse and explore all the Surahs of the Quran with their details and translations.",
+    openGraph: {
+      title: "Read Quran - Explore Surahs",
+      description: "Discover and explore all Surahs of the Quran with detailed information, translations, and verse counts.",
+      url: "/read",
+    },
+  };
+  
 const ReadPage = async () => {
     const surahs = await fetchSurahs()
 
