@@ -2,9 +2,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import {
-  MoreVertical,
-} from "lucide-react"
 import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { ListenSection } from "@/components/ListenSection/ListenSection"

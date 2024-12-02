@@ -79,17 +79,17 @@ export default function Footer() {
                             </Link>
                             <Link
                                 target="__blank"
+                                href="https://github.com/MuhammadKaifNazeer/al-quran"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
-                                href="https://x.com/MuhammadKaif999"
                             >
-                                Twitter
+                                Developers
                             </Link>
                             <Link
                                 target="__blank"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
-                                href="https://discord.gg/yZpeqXgqNc"
+                                href="https://x.com/MuhammadKaif999"
                             >
-                                Discord
+                                Twitter
                             </Link>
                         </div>
                     </div>

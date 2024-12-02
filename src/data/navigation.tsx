@@ -4,7 +4,7 @@ import {
   HandCoins,
   Home,
   Mic,
-  MoveUpRight,
+  CodeXml,
   Settings,
   User,
 } from "lucide-react";
@@ -52,6 +52,12 @@ const NavigationLinks: NavigationLinksType = {
       icon: HandCoins,
       label: "Support",
       href: "https://buymeacoffe.com/muhammadkaifnazeer",
+      external: true,
+    },
+    {
+      icon: CodeXml,
+      label: "Developers",
+      href: "https://github.com/MuhammadKaifNazeer/al-quran",
       external: true,
     },
   ],
