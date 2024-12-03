@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import AuthProvider from "./authProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="mx-auto 2xl:max-w-[90rem]">
-            {children}
+            <AuthProvider>{children}</AuthProvider>
           </main>
         </ThemeProvider>
       </body>

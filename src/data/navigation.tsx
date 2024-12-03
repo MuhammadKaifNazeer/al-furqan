@@ -44,11 +44,6 @@ const NavigationLinks: NavigationLinksType = {
       href: "/profile",
     },
     {
-      icon: Settings,
-      label: "Settings",
-      href: "/settings",
-    },
-    {
       icon: HandCoins,
       label: "Support",
       href: "https://buymeacoffe.com/muhammadkaifnazeer",

@@ -123,8 +123,11 @@ export default function Home() {
               </div>
             </div>
 
-  {/* read quran */}
-  <div className="py-4">
+            {/* listen quran */}
+            <ListenSection />
+
+            {/* read quran */}
+            <div className="py-4">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-xl font-semibold">Read Quran</h2>
                 <div className="flex space-x-2">
@@ -164,12 +167,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
-            {/* listen quran */}
-            <ListenSection />
 
-
-          
           </div>
         </div>
       </div>

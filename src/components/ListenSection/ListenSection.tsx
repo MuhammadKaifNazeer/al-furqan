@@ -22,10 +22,8 @@ const ListenOptions = [
 export function ListenSection() {
     return (
         <div className="pt-4 pb-[4.3rem]">
-            <div className="mb-4 flex items-center justify-start">
-                <h2 className="text-xl font-semibold">Listen Quran</h2>
-            </div>
-            <div className="">
+
+            {/* <div className="">
                 <div className="flex shrink-0 items-center justify-center rounded-md border border-dashed min-h-[15rem]">
                     <div className="mx-auto flex w-full flex-col items-center justify-center text-center">
                         <svg
@@ -48,23 +46,26 @@ export function ListenSection() {
                         </p>
                     </div>
                 </div>
-            </div>
-            {/* <Carousel>       
+            </div> */}
+            <Carousel>
+                <div className="mb-4 flex items-center justify-start">
+                    <h2 className="text-xl font-semibold">Listen Quran</h2>
+                </div>
                 <CarouselContent className="-ml-4">
                     {ListenOptions.map((option, index) => (
                         <CarouselItem key={index} className="sm:basis-1/2 pl-4">
                             <Link href={option.href}>
                                 <Card key={index} className="border-none group">
                                     <CardContent className="p-0">
-                                        <div className="relative flex flex-col items-center justify-center aspect-video bg-gradient-to-br from-green-500 to-green-600 rounded-sm overflow-hidden p-4">  
-                                            <h1 className="font-bold text-2xl text-center">{option.title}</h1>
-                                            <Image
+                                        <div className="relative flex flex-col items-center justify-center aspect-video bg-accent rounded-sm overflow-hidden p-4">
+                                            {/* <h1 className="font-bold text-2xl text-center">{option.title}</h1> */}
+                                            {/* <Image
                                                 src={option.coverImage}
                                                 alt={option.title}
                                                 width={4000}
                                                 height={2000}
                                                 className="object-cover h-full w-full transition duration-200 group-hover:scale-[1.03]"
-                                            />
+                                            /> */}
                                         </div>
                                         <div className="px-1 py-3">
                                             <div className=" flex items-center justify-between">
@@ -86,7 +87,7 @@ export function ListenSection() {
                     classNameButton="bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800"
                     alwaysShow
                 />
-            </Carousel> */}
+            </Carousel>
         </div>
     )
 }
