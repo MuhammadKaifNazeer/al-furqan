@@ -6,6 +6,7 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { ListenSection } from "@/components/ListenSection/ListenSection"
 import FullSidebarLayout from "@/layouts/fullSidbarLayout"
+import { BookOpen } from "lucide-react"
 
 const surahs = [
   { id: 67, name: "Al Mulk", href: "/surah/67" },
@@ -63,7 +64,7 @@ export default function Home() {
               <CardContent className="flex items-center justify-between p-6">
                 <div className="space-y-2">
                   <h2 className="text-2xl font-bold">
-                    Al Quran Daily Recitation
+                    Read and Listen to the Quran <br className="hidden md:block" /> Anywhere, Anytime
                   </h2>
                   <p className="text-green-200">
                     Inspiring to be a muslim. A Service for
@@ -76,13 +77,16 @@ export default function Home() {
                     </Button>
                   </Link>
                 </div>
-                <Image
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Quran Reciters"
+                {/* <Image
+                  src=""
+                  alt="Quran"  
                   width={160}
                   height={160}
                   className="rounded-lg"
-                />
+                /> */}
+                <div className="hidden md:flex h-full aspect-square items-center justify-center text-primary-foreground">
+                  <BookOpen className="size-40" />
+                </div>
               </CardContent>
             </Card>
 
