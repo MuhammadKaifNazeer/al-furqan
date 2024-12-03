@@ -76,7 +76,7 @@ export function Navbar() {
                 className={`fixed md:hidden w-screen h-screen bg-black/70 z-[105]  duration-500  ${isOpen ? "-translate-x-0 opacity-1" : "-translate-x-full opacity-0"
                     }`}
                 onClick={() => setIsOpen(false)}
-            />
+            />   
 
             <div className={`fixed md:hidden top-0 z-[110] flex h-screen w-64 flex-col bg-background  duration-500 ${isOpen ? "-translate-x-0" : "-translate-x-full"
                 }`}>
