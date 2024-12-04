@@ -1,34 +1,19 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
-import { ListenSection } from "@/components/ListenSection/ListenSection"
 import FullSidebarLayout from "@/layouts/fullSidbarLayout"
 import { BookOpen } from "lucide-react"
+import { fetchSurahs } from "@/utils/api"
 
-const surahs = [
+const RecommendedSurahs = [
   { id: 67, name: "Al Mulk", href: "/surah/67" },
   { id: 36, name: "Yaseen", href: "/surah/36" },
   { id: 1, name: "Al-Fatihah", href: "/surah/1" },
   { id: 18, name: "Al Kahf", href: "/surah/18" },
   { id: 56, name: "Al Waqi'ah", href: "/surah/56" },
 ];
-
-const LearningMethods = [
-  {
-    title: "Read Quran",
-    description: "Explore the Quran with translations for better understanding.",
-    href: "/read",
-  },
-  {
-    title: "Listen Quran",
-    description: "Immerse yourself in the melodious recitation of the Quran by renowned reciters.",
-    href: "/listen",
-  },
-]
-
 
 const quranSurah = [
   {
@@ -54,7 +39,9 @@ const quranSurah = [
   },
 ]
 
-export default function Home() {
+export default async function Home() {
+  const surahs = await fetchSurahs()
+
   return (
     <FullSidebarLayout>
       <div className="flex flex-col">
@@ -92,7 +79,7 @@ export default function Home() {
 
             <ScrollArea className="w-full whitespace-nowrap">
               <div className="flex w-max space-x-4 py-4">
-                {surahs.map((surah, index) => (
+                {RecommendedSurahs.map((surah, index) => (
                   <Link href={surah.href} key={index}>
                     <Button
                       variant={index === 0 ? "default" : "outline"}
@@ -114,23 +101,23 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                {quranSurah.map((surah, index) => (
-                  <Link href={surah.href} key={index}>
+                {surahs.slice(0, 5).map((surah) => ( 
+                  <Link key={surah.id} href={`/surah/${surah.id}`}>
                     <div className="flex items-center justify-between rounded-lg border border-border p-4 hover:bg-muted/50" >
                       <div className="flex items-center space-x-4">
                         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 font-semibold text-primary">
-                          {surah.number}
+                          {surah.id}
                         </div>
                         <div>
-                          <h3 className="font-semibold">{surah.title}</h3>
+                          <h3 className="font-semibold">{surah.name_simple}</h3>
                           <p className="text-sm text-muted-foreground">
-                            {surah.subtitle}
+                            {surah.translated_name.name}
                           </p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-4">
                         <span className="text-sm text-muted-foreground">
-                          {surah.ayahs}
+                          {surah.verses_count} Verses
                         </span>
                         <Button variant="ghost" size="icon">
                           <ArrowTopRightIcon className="h-4 w-4" />
