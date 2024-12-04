@@ -34,11 +34,6 @@ const NavigationLinks: NavigationLinksType = {
       href: "/read",
     },
     {
-      icon: Mic,
-      label: "Listen Quran",
-      href: "/listen",
-    },
-    {
       icon: User,
       label: "Profile",
       href: "/profile",

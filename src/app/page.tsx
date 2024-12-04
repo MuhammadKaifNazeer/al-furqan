@@ -64,14 +64,14 @@ export default function Home() {
               <CardContent className="flex items-center justify-between p-6">
                 <div className="space-y-2">
                   <h2 className="text-2xl font-bold">
-                    Read and Listen to the Quran <br className="hidden md:block" /> Anywhere, Anytime
+                    Read the Quran Anywhere,<br className="hidden md:block" /> Anytime
                   </h2>
                   <p className="text-green-200">
                     Inspiring to be a muslim. A Service for
                     <br />
                     Ummah of Mumhammad(PBUH)
                   </p>
-                  <Link href={'/#startlearning'}>
+                  <Link href={'/read'}>
                     <Button className="mt-4 bg-white hover:bg-white/90 text-primary">
                       Start Learning
                     </Button>
@@ -106,34 +106,9 @@ export default function Home() {
               <ScrollBar orientation="horizontal" />
             </ScrollArea>
 
-            {/* learning methods */}
-            <div className="pb-4" id="startlearning">
-              <div className="mb-4 flex items-center justify-start">
-                <h2 className="text-xl font-semibold">Start Learning</h2>
-              </div>
-              <div className="gap-3 grid grid-cols-1 sm:grid-cols-2">
-                {LearningMethods.map((method, index) => (
-                  <Link key={index} href={method.href}>
-                    <div className="flex items-center justify-between rounded-[--radius] border p-4 hover:bg-muted/50">
-                      <div className="space-y-3">
-                        <h3 className="font-semibold">{method.title}</h3>
-                        <p className="text-sm text-muted-foreground line-clamp-2">
-                          {method.description}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* listen quran */}
-            <ListenSection />
-
-            {/* read quran */}
-            <div className="py-4">
+            <div className="py-4" id='startlearning'>
               <div className="mb-4 flex items-center justify-between">
-                <h2 className="text-xl font-semibold">Read Quran</h2>
+                <h2 className="text-xl font-semibold">Start Learning</h2>
                 <div className="flex space-x-2">
                   <Button variant="outline" size="sm">Surahs</Button>
                 </div>

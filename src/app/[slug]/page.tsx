@@ -2,17 +2,13 @@
 
 import { useParams } from 'next/navigation';
 import FullSidebarLayout from '@/layouts/fullSidbarLayout'
-import MicroSidebarLayout from '@/layouts/microSidebarLayout';
 import React from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Play, SkipForward, Volume2, MoreVertical, Maximize2 } from 'lucide-react'
 import ListenQuranData from '@/data/listenQuranData';
 import { slugify } from '@/utils/slugify';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
-import { Separator } from '@/components/ui/separator';
 
 const ListenQuran = () => {
     const { slug } = useParams();
@@ -48,7 +44,7 @@ const ListenQuran = () => {
                                 <Image
                                     src={matchedItem.thumbnail}
                                     width={4000}
-                                    height={2000}
+                                    height={2000}   
                                     alt={matchedItem.title}
                                     className='aspect-video rounded-[--radius]'
                                 />

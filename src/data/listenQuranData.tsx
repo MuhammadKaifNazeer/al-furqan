@@ -26,7 +26,7 @@ const ListenQuranData: ListenQuran[] = [
                 surahName: "Al-Fatiha",
                 surahNameMeaningInEnglish: "The Opener",
                 ayah: 7,
-                videoLink: "https://www.youtube.com/watch?v=pf-ghJxGHO4&list=PLjMdlvowxr_0XqrqKSvbvcKd4562mnonS&index=1&pp=iAQB",
+                videoLink: "https://youtu.be/b48Zq-jC9s8?si=MAkM9VngfiN1TgdZ",
             },
             {
                 surahNumber: 2,
