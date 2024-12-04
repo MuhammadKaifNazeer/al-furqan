@@ -15,30 +15,6 @@ const RecommendedSurahs = [
   { id: 56, name: "Al Waqi'ah", href: "/surah/56" },
 ];
 
-const quranSurah = [
-  {
-    number: "1",
-    title: "Al-Fatiha",
-    subtitle: "The Opener",
-    ayahs: "7 Ayah",
-    href: "/surah/1"
-  },
-  {
-    number: "2",
-    title: "Al-Baqarah",
-    subtitle: "The Cow",
-    ayahs: "286 Ayah",
-    href: "/surah/2"
-  },
-  {
-    number: "3",
-    title: "Ali 'Imran",
-    subtitle: "Family of Imran",
-    ayahs: "200 Ayah",
-    href: "/surah/3"
-  },
-]
-
 export default async function Home() {
   const surahs = await fetchSurahs()
 
