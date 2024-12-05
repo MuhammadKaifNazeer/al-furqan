@@ -41,7 +41,7 @@ const NavigationLinks: NavigationLinksType = {
     {
       icon: HandCoins,
       label: "Support",
-      href: "https://buymeacoffe.com/muhammadkaifnazeer",
+      href: "https://buymeacoffee.com/muhammadkaifnazeer",
       external: true,
     },
     {

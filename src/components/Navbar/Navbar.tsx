@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import {
     BookOpen,
-    Search,
+    Search as SearhIcon,
     Settings,
     X,
 } from "lucide-react"
@@ -16,6 +16,7 @@ import { useState } from "react"
 import { UserButton } from "../UserButton/UserButton"
 import NavigationLinks from "@/data/navigation"
 import { Input } from "../ui/input"
+import Search from "../Search/Search"
 
 export function Navbar() {
     const pathname = usePathname();
@@ -28,10 +29,7 @@ export function Navbar() {
     return (
         <>
             <div className="sticky top-0 z-10 bg-background px-4 py-2.5 hidden md:flex items-center space-x-4">
-                <div className="relative w-full">
-                    <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="What do you want to read?" className="pl-8" />
-                </div>
+                    <Search />
                 <ThemeToggler />
                 <Link
                     target="__blank"
@@ -57,7 +55,7 @@ export function Navbar() {
                 </Link>
                 <div className="flex items-center justify-end space-x-4">
                     <div className="">
-                        <Search className="h-4 w-4" />
+                        {/* <Search className="h-4 w-4" /> */}
                     </div>
                     <ThemeToggler />
                     <Button
@@ -76,7 +74,7 @@ export function Navbar() {
                 className={`fixed md:hidden w-screen h-screen bg-black/70 z-[105]  duration-500  ${isOpen ? "-translate-x-0 opacity-1" : "-translate-x-full opacity-0"
                     }`}
                 onClick={() => setIsOpen(false)}
-            />   
+            />
 
             <div className={`fixed md:hidden top-0 z-[110] flex h-screen w-64 flex-col bg-background  duration-500 ${isOpen ? "-translate-x-0" : "-translate-x-full"
                 }`}>
