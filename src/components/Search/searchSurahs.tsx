@@ -7,8 +7,8 @@ const SearchSurahs = ({ surahs }: { surahs: Array<{ id: number; name_simple: str
     return (
         <div>
             {surahs.map((surah) => (
-                <CommandItem>
-                    <Link key={surah.id} href={`/surah/${surah.id}`} className="h-full w-full ">
+                <CommandItem key={surah.id}>
+                    <Link href={`/surah/${surah.id}`} className="h-full w-full ">
                         <span>{surah.id}. {surah.name_simple}</span>
                     </Link>
                 </CommandItem>

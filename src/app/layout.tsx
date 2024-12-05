@@ -2,16 +2,52 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
 import AuthProvider from "./authProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Al-Quran - The Noble Quran",
+  title: "Al Furqan",
   description:
-    "Al-Quran - The Noble Quran",
+    "",
+  applicationName: "AL Quran",
+  authors: [{ name: "Muhammad Kaif Nazeer" }],
+  keywords: [
+    "Quran",
+  ],
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  themeColor: "#ffffff",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "",
+    description:
+      "",
+    url: "https://www.al-quran.vercel.app",
+    siteName: "AL Quran",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.al-quran.vercel.app",
+    languages: {
+      en: "https://www.al-quran.vercel.app",
+    },
+  },
 };
 
 export default function RootLayout({
