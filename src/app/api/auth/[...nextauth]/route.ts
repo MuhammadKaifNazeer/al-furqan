@@ -1,23 +1,16 @@
-// app/api/auth/[...nextauth]/route.ts
-
 import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
-// Define NextAuth options
 export const authOptions: NextAuthOptions = {
-  // Configure one or more authentication providers
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
-    // You can add more providers here
   ],
   
-  // Secret for encryption
   secret: process.env.NEXTAUTH_SECRET,
 
-  // Configure session strategy (optional)
   session: {
     strategy: "jwt",
   },

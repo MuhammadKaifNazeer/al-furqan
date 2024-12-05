@@ -7,13 +7,21 @@ import AuthProvider from "./authProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Al Furqan",
+  title: "Al-Furqan - The Criterion of Truth",
   description:
-    "",
-  applicationName: "AL Quran",
+    "Explore Al-Furqan, the Criterion of Truth. Access translations, recitations, and tafsir of the Quran, the divine guidance for humanity.",
+  applicationName: "Al Furqan",
   authors: [{ name: "Muhammad Kaif Nazeer" }],
   keywords: [
+    "Al Furqan",
     "Quran",
+    "Holy Quran",
+    "Islam",
+    "Quran Translation",
+    "Quran Recitation",
+    "Tafsir",
+    "Islamic Text",
+    "The Criterion",
   ],
   viewport: "width=device-width, initial-scale=1.0",
   robots: {
@@ -26,11 +34,11 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "",
+    title: "Al Furqan - The Criterion of Truth",
     description:
-      "",
-    url: "https://www.al-quran.vercel.app",
-    siteName: "AL Quran",
+      "Discover Al Furqan, the Criterion between right and wrong. Dive into Quranic translations, recitations, and tafsir in an intuitive platform.",
+    url: "https://www.alfurqan.vercel.app",
+    siteName: "Al Furqan",
     type: "website",
     locale: "en_US",
     images: [
@@ -38,14 +46,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "",
+        alt: "Al Furqan - The Criterion of Truth",
       },
     ],
   },
   alternates: {
-    canonical: "https://www.al-quran.vercel.app",
+    canonical: "https://www.alfurqan.vercel.app",
     languages: {
-      en: "https://www.al-quran.vercel.app",
+      en: "https://www.alfurqan.vercel.app",
     },
   },
 };
