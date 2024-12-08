@@ -8,9 +8,9 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Al-Furqan -  Online Quran Reading Platform",
+  title: "Al-Furqan -  Online Quran Learning Platform",
   description:
-    "Al Furqan is an online Quran reading platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
+    "Al Furqan is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
   applicationName: "Al Furqan",
   authors: [{ name: "Muhammad Kaif Nazeer" }],
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Read Quran",
     "Quran Tafsir",
     "Learn Quran",
-    "Quran Reading Platform",
+    "Quran Learning Platform",
   ],
   viewport: "width=device-width, initial-scale=1.0",
   robots: {
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Al-Furqan -  Online Quran Reading Platform",
+    title: "Al-Furqan -  Online Quran Learning Platform",
     description:
-      "Al Furqan is an online Quran reading platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
+      "Al Furqan is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
     url: "https://alfurqan.vercel.app",
     siteName: "Al Furqan",
     type: "website",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Al-Furqan -  Online Quran Reading Platform",
+        alt: "Al-Furqan -  Online Quran Learning Platform",
       },
     ],
   },
