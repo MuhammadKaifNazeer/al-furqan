@@ -60,7 +60,7 @@ export default async function SurahPage({ params }: { params: { id: string } }) 
                     ))}
                 </div>
                 <div className="grid grid-cols-2 mt-4 gap-2">
-                    {previousSurah && (
+                    {previousSurah ? (
                         <Link href={`/surah/${previousSurah.id}`}>
                             <Card className="flex w-full flex-col gap-2 p-4 text-sm transition-colors hover:bg-accent/80 hover:text-accent-foreground">
                                 <div className="inline-flex items-center gap-0.5 text-muted-foreground">
@@ -83,8 +83,10 @@ export default async function SurahPage({ params }: { params: { id: string } }) 
                                 <p className="font-medium">{previousSurah.name_simple}</p>
                             </Card>
                         </Link>
+                    ) : (
+                        <div />
                     )}
-                    {nextSurah && (
+                    {nextSurah ? (
                         <Link href={`/surah/${nextSurah.id}`}>
                             <Card className="flex w-full flex-col gap-2 p-4 text-sm transition-colors hover:bg-accent/80 hover:text-accent-foreground text-end">
                                 <div className="inline-flex items-center gap-0.5 text-muted-foreground flex-row-reverse">
@@ -107,6 +109,8 @@ export default async function SurahPage({ params }: { params: { id: string } }) 
                                 <p className="font-medium">{nextSurah.name_simple}</p>
                             </Card>
                         </Link>
+                    ) : (
+                        <div />
                     )}
                 </div>
             </div>
