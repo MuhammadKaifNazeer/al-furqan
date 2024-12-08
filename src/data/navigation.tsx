@@ -47,7 +47,7 @@ const NavigationLinks: NavigationLinksType = {
     {
       icon: CodeXml,
       label: "Developers",
-      href: "https://github.com/MuhammadKaifNazeer/al-quran",
+      href: "https://github.com/MuhammadKaifNazeer/al-furqan",
       external: true,
     },
   ],

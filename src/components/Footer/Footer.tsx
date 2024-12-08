@@ -79,7 +79,7 @@ export default function Footer() {
                             </Link>
                             <Link
                                 target="__blank"
-                                href="https://github.com/MuhammadKaifNazeer/al-quran"
+                                href="https://github.com/MuhammadKaifNazeer/al-furqan"
                                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                             >
                                 Developers
