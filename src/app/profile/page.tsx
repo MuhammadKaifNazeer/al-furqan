@@ -6,8 +6,9 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { Metadata } from "next";
 
-export default function DialogDemo() {
+export default function ProfilePage() {
     const { data: session, status } = useSession();
 
     if (status === "loading") {

@@ -49,7 +49,7 @@ export function Navbar() {
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                                 <BookOpen className="size-4" />
                             </div>
-                            <span className="font-semibold">AL Quran <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
+                            <span className="font-semibold">AL Furqan <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
                         </div>
                     </div>
                 </Link>
@@ -86,7 +86,7 @@ export function Navbar() {
                                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                                         <BookOpen className="size-4" />
                                     </div>
-                                    <span className="font-semibold">AL Quran <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
+                                    <span className="font-semibold">AL Furqan <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
                                 </div>
                             </div>
                         </Link>

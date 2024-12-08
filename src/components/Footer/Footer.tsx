@@ -18,7 +18,7 @@ export default function Footer() {
                                 </div>
                                 <div className="flex flex-col">
                                     <h1 className="text-black dark:text-white font-sans">
-                                        AL Quran <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup>
+                                        AL Furqan <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup>
                                     </h1>
                                 </div>
                             </Link>

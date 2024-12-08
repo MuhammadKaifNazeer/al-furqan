@@ -7,9 +7,9 @@ import AuthProvider from "./authProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Al-Furqan - The Criterion of Truth",
+  title: "Al-Furqan -  Online Quran Reading Platform",
   description:
-    "Explore Al-Furqan, the Criterion of Truth. Access translations, recitations, and tafsir of the Quran, the divine guidance for humanity.",
+    "Al Furqan is an online Quran reading platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
   applicationName: "Al Furqan",
   authors: [{ name: "Muhammad Kaif Nazeer" }],
   keywords: [
@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     "Tafsir",
     "Islamic Text",
     "The Criterion",
+    "Online Quran",
+    "Read Quran",
+    "Quran Tafsir",
+    "Learn Quran",
+    "Quran Reading Platform",
   ],
   viewport: "width=device-width, initial-scale=1.0",
   robots: {
@@ -30,14 +35,14 @@ export const metadata: Metadata = {
   },
   themeColor: "#ffffff",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Al Furqan - The Criterion of Truth",
+    title: "Al-Furqan -  Online Quran Reading Platform",
     description:
-      "Discover Al Furqan, the Criterion between right and wrong. Dive into Quranic translations, recitations, and tafsir in an intuitive platform.",
-    url: "https://www.alfurqan.vercel.app",
+      "Al Furqan is an online Quran reading platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
+    url: "https://alfurqan.vercel.app",
     siteName: "Al Furqan",
     type: "website",
     locale: "en_US",
@@ -46,14 +51,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Al Furqan - The Criterion of Truth",
+        alt: "Al-Furqan -  Online Quran Reading Platform",
       },
     ],
   },
   alternates: {
-    canonical: "https://www.alfurqan.vercel.app",
+    canonical: "https://alfurqan.vercel.app",
     languages: {
-      en: "https://www.alfurqan.vercel.app",
+      en: "https://alfurqan.vercel.app",
     },
   },
 };
