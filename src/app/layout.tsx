@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import AuthProvider from "./authProvider";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,7 +79,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="mx-auto 2xl:max-w-[90rem]">
-            <AuthProvider>{children}</AuthProvider>
+            <AuthProvider>
+              <Analytics />
+              {children}
+            </AuthProvider>
           </main>
         </ThemeProvider>
       </body>
