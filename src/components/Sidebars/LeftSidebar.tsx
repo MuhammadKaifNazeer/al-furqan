@@ -3,16 +3,6 @@
 import { Button } from "@/components/ui/button"
 import {
   BookOpen,
-  GraduationCap,
-  Heart,
-  HelpCircle,
-  History,
-  Home,
-  Podcast,
-  Search,
-  Settings,
-  Users,
-  X,
 } from "lucide-react"
 import { ScrollArea } from "../ui/scroll-area"
 import { usePathname } from "next/navigation"
@@ -34,7 +24,7 @@ export function LeftSidebar() {
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                     <BookOpen className="size-4" />
                   </div>
-                  <span className="font-semibold">AL Quran <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
+                  <span className="font-semibold">AL Noor <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
                 </div>
               </div>
             </Link>

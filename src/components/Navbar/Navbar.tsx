@@ -3,8 +3,6 @@
 import { Button } from "@/components/ui/button"
 import {
     BookOpen,
-    Search as SearhIcon,
-    Settings,
     X,
 } from "lucide-react"
 import { ScrollArea } from "../ui/scroll-area"
@@ -15,7 +13,6 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { UserButton } from "../UserButton/UserButton"
 import NavigationLinks from "@/data/navigation"
-import { Input } from "../ui/input"
 import Search from "../Search/Search"
 
 export function Navbar() {
@@ -31,12 +28,12 @@ export function Navbar() {
             <div className="sticky top-0 z-10 bg-background px-4 py-2.5 hidden md:flex items-center space-x-4">
                     <Search />
                 <ThemeToggler />
-                <Link
+                {/* <Link
                     target="__blank"
-                    href="https://buymeacoffee.com/muhammadkaifnazeer"
+                    href="https://buymeacoffee.com/"
                 >
                     <Button>Support</Button>
-                </Link>
+                </Link> */}
             </div>
 
             <div className="fixed md:hidden top-0 z-10 bg-background px-6 py-2.5 flex items-center justify-between w-full">
@@ -49,7 +46,7 @@ export function Navbar() {
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                                 <BookOpen className="size-4" />
                             </div>
-                            <span className="font-semibold">AL Furqan <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
+                            <span className="font-semibold">AL Noor <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup></span>
                         </div>
                     </div>
                 </Link>

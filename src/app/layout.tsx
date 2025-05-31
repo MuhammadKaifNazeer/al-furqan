@@ -8,13 +8,13 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Al-Furqan -  Online Quran Learning Platform",
+  title: "Al-Noor -  Online Quran Learning Platform",
   description:
-    "Al Furqan is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
-  applicationName: "Al Furqan",
+    "Al Noor is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
+  applicationName: "Al Noor",
   authors: [{ name: "Muhammad Kaif Nazeer" }],
   keywords: [
-    "Al Furqan",
+    "Al Noor",
     "Quran",
     "Holy Quran",
     "Islam",
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Al-Furqan -  Online Quran Learning Platform",
+    title: "Al-Noor -  Online Quran Learning Platform",
     description:
-      "Al Furqan is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
-    url: "https://alfurqan.vercel.app",
-    siteName: "Al Furqan",
+      "Al Noor is an online Quran learning platform where you can read the Quran with translations. Access the Quran anywhere, anytime.",
+    url: "https://noor.musayyabshah.com",
+    siteName: "Al Noor",
     type: "website",
     locale: "en_US",
     images: [
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Al-Furqan -  Online Quran Learning Platform",
+        alt: "Al-Noor -  Online Quran Learning Platform",
       },
     ],
   },
   alternates: {
-    canonical: "https://alfurqan.vercel.app",
+    canonical: "https://noor.musayyabshah.com",
     languages: {
-      en: "https://alfurqan.vercel.app",
+      en: "https://noor.musayyabshah.com",
     },
   },
 };

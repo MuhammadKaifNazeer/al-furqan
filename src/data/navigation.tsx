@@ -38,18 +38,6 @@ const NavigationLinks: NavigationLinksType = {
       label: "Profile",
       href: "/profile",
     },
-    {
-      icon: HandCoins,
-      label: "Support",
-      href: "https://buymeacoffee.com/muhammadkaifnazeer",
-      external: true,
-    },
-    {
-      icon: CodeXml,
-      label: "Developers",
-      href: "https://github.com/MuhammadKaifNazeer/al-furqan",
-      external: true,
-    },
   ],
   secondaryNav: [
     {

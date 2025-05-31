@@ -1,3 +1,4 @@
+import NavigationLinks from "@/data/navigation";
 import { BookOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,79 +19,37 @@ export default function Footer() {
                                 </div>
                                 <div className="flex flex-col">
                                     <h1 className="text-black dark:text-white font-sans">
-                                        AL Furqan <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup>
+                                        AL Noor <sup className="text-[12px] text-white dark:text-black bg-black dark:bg-white px-[4px] rounded">Beta</sup>
                                     </h1>
                                 </div>
                             </Link>
                         </div>
                         <div>
-                            Brought to you by{" "}
-                            <Link
-                                target="__blank"
-                                className="dark:text-white text-neutral-600 font-medium"
-                                href="https://bento.me/muhammadkaifnazeer"
-                            >
-                                Muhammad Kaif Nazeer
-                            </Link>
+                            Inspiring to be a muslim. A Service for Ummah of Mumhammad(PBUH)
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 items-start mt-10 md:mt-0">
+                    <div className="grid grid-cols-2 gap-10 items-start mt-10 md:mt-0">
                         <div className="flex justify-center space-y-4 flex-col mt-4">
-                            <Link
-                                href="/"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                href="/read"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Read Quran
-                            </Link>
-                            <Link
-                                href="/listen"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Listen Quran
-                            </Link>
+                            {NavigationLinks.mainNav.map((link, idx) => (
+                                <Link
+                                    key={idx}
+                                    href={link.href}
+                                    className="transition-colors hover:text-foreground/80 text-foreground/60"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
                         </div>
                         <div className="flex justify-center space-y-4 flex-col mt-4">
-                            <Link
-                                href="/profile"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Profile
-                            </Link>
-                            <Link
-                                href="/settings"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Settings
-                            </Link>
-                        </div>
-                        <div className="flex justify-center space-y-4 flex-col mt-4">
-                            <Link
-                                target="__blank"
-                                href="https://buymeacoffee.com/muhammadkaifnazeer"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Support
-                            </Link>
-                            <Link
-                                target="__blank"
-                                href="https://github.com/MuhammadKaifNazeer/al-furqan"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                            >
-                                Developers
-                            </Link>
-                            <Link
-                                target="__blank"
-                                className="transition-colors hover:text-foreground/80 text-foreground/60"
-                                href="https://x.com/MuhammadKaif999"
-                            >
-                                Twitter
-                            </Link>
+                            {NavigationLinks.secondaryNav.map((link, idx) => (
+                                <Link
+                                    key={idx}
+                                    href={link.href}
+                                    className="transition-colors hover:text-foreground/80 text-foreground/60"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>

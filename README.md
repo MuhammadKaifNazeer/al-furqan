@@ -1,1 +1,1 @@
-Al-Quran
+Al-Noor
